@@ -48,7 +48,7 @@ export default {
   }
   .user{
     width: 100%;
-    height: 498px;
+    height: 31.125rem;
     position: relative;
   }
 .topImg{
@@ -60,8 +60,8 @@ export default {
   z-index: -1;
 }
 .img{
-  width: 256px;
-  height: 234px;
+  width: 16rem;
+  height: 14.625rem;
 }
 .explain{
   display: flex;
