@@ -10,7 +10,7 @@
           <img class="img" src="../../img/tuxing_1.png">
         </div>
         <div class="txt">
-          <div class="title">2022年光棍节</div>
+          <div class="title">2022年中秋节</div>
           <div class="content">光棍节是一种流传于年轻人的娱乐性节日 以庆祝自己仍是单身一族为骄傲 11月11日 光棍节，源于这一天日期里 有四个阿拉伯数字“1“形似四根光滑的棍子</div>
         </div>
       </div>
