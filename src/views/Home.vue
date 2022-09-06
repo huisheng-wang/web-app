@@ -4,7 +4,7 @@
       <div class="topImg">
         <img class="topImg" src="../../img/top_bg.png">
       </div>
-      <div class="text">欢迎来到</div>
+      <div class="text">欢迎来到便城</div>
       <div class="explain">
         <div class="img">
           <img class="img" src="../../img/tuxing_1.png">
