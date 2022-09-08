@@ -1,19 +1,37 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+import me from '../views/me.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
-    name: 'home',
-    component: Home
+    name: 'me',
+    component: me,
+    children: [
+      {
+        // 当 /user/:id/profile 匹配成功
+        // UserProfile 将被渲染到 User 的 <router-view> 内部
+        path: 'home',
+        component: ()=>import("../views/Home.vue")
+      },
+    ]
   },
   {
     path: '/about',
     name: 'About',
-    component: () => import('../views/About.vue')
+    component: () => import(/* webpackChunkName:“lodash” */'../views/About.vue')
+  },
+  {
+    path: '/homes',
+    name: 'home',
+    component: ()=>import("../views/Home.vue")
+  },
+  {
+    path: '/code',
+    name: 'code',
+    component: ()=>import("../views/code.vue")
   }
 ]
 
