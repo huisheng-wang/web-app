@@ -66,8 +66,9 @@ export default {
   methods:{
     skip(e){
      const UrlFilters = {
-       '余额':'/about',
+       '余额':'/balance',
        '个人设置':'/homes',
+       '企业认证': '/about'
      }
       this.$router.push({ path: `${UrlFilters[e.name] || '/code'}/${e.name}`})
     }

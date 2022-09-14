@@ -17,29 +17,29 @@ const routes = [
     ]
   },
   {
-    path: '/about',
+    path: '/about/:name',
     name: 'About',
-    component: () => import(/* webpackChunkName:“lodash” */'../views/About.vue')
+    component: () => import(/* webpackChunkName:"about" */'../views/About.vue')
   },
   {
-    path: '/homes',
+    path: '/homes/:name',
     name: 'home',
     component: ()=>import("../views/Home.vue")
   },
   {
-    path: '/code',
+    path: '/code/:name',
     name: 'code',
     component: ()=>import("../views/code.vue")
   },
  {
-  path: '/balance',
+  path: '/balance/:name',
   name: 'balance',
   component: () => import ("../views/balance")
  }
 ]
 
 const router = new VueRouter({
-  mode: 'history',
+  mode: 'hash',
   base: process.env.BASE_URL,
   routes
 })

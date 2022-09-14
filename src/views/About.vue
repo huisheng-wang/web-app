@@ -104,7 +104,6 @@ export default {
   background-image: url('../../img/tuxing_2.png');
 	background-repeat:no-repeat;
   background-size: 100% 100%;
-  /* position: absolute; */
   position: relative;
 }
 .demo-ruleForm{
