@@ -72,6 +72,9 @@ export default {
         }
       };
     },
+    mounted(){     
+      console.log(this.$route.params.name);
+    },
     methods: {
       submitForm(formName) {
         this.$refs[formName].validate((valid) => {

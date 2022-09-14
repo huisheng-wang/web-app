@@ -69,7 +69,7 @@ export default {
        '余额':'/about',
        '个人设置':'/homes',
      }
-      this.$router.push(UrlFilters[e.name] || '/code')
+      this.$router.push({ path: `${UrlFilters[e.name] || '/code'}/${e.name}`})
     }
   }
   

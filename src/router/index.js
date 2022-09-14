@@ -11,8 +11,6 @@ const routes = [
     component: me,
     children: [
       {
-        // 当 /user/:id/profile 匹配成功
-        // UserProfile 将被渲染到 User 的 <router-view> 内部
         path: 'home',
         component: ()=>import("../views/Home.vue")
       },
@@ -32,7 +30,12 @@ const routes = [
     path: '/code',
     name: 'code',
     component: ()=>import("../views/code.vue")
-  }
+  },
+ {
+  path: '/balance',
+  name: 'balance',
+  component: () => import ("../views/balance")
+ }
 ]
 
 const router = new VueRouter({
