@@ -45,18 +45,18 @@ export default {
                     oddNumbers: "123456789",
                     sumMoney:'+100'
                 },
-                {
-                    method: "支付宝充值" ,
-                    time: "2019-10-30 16:00:00",
-                    oddNumbers: "123456789",
-                    sumMoney:'+100'
-                },
-                {
-                    method: "公户充值" ,
-                    time: "2019-10-30 16:00:00",
-                    oddNumbers: "123456789",
-                    sumMoney:'+100'
-                }
+                // {
+                //     method: "支付宝充值" ,
+                //     time: "2019-10-30 16:00:00",
+                //     oddNumbers: "123456789",
+                //     sumMoney:'+100'
+                // },
+                // {
+                //     method: "公户充值" ,
+                //     time: "2019-10-30 16:00:00",
+                //     oddNumbers: "123456789",
+                //     sumMoney:'+100'
+                // }
             ]
         }
     }

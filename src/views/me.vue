@@ -68,7 +68,8 @@ export default {
      const UrlFilters = {
        '余额':'/balance',
        '个人设置':'/homes',
-       '企业认证': '/about'
+       '企业认证': '/about',
+       '人脸支付': '/recharge'
      }
       this.$router.push({ path: `${UrlFilters[e.name] || '/code'}/${e.name}`})
     }
