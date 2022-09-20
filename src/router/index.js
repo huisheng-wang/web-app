@@ -40,6 +40,11 @@ const routes = [
   path:'/Recharge/:name',
   name: 'Recharge',
   component: ()=> import ("../views/Recharge")
+ },
+ {
+  path: '/attestation/:name',
+  name: 'attestation',
+  component:()=> import ("../views/attestation")
  }
 ]
 

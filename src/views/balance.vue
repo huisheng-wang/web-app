@@ -15,51 +15,49 @@
             </div>
         </div>
         <div class="downs">
-            <div class="down">
-                <div class="tit">充值记录</div>
-            </div>
-            <div class="details" v-for="item in downsData" :key="item">
-                <div class="conten">
-                    <div class="recharge">{{item.method}}</div>
-                    <div class="time">{{item.time}}</div>
-                    <div class="num">交易单号:<span class="number">{{item.oddNumbers}}</span></div>
-                </div>
-                <div class="sumMoney">{{item.sumMoney}}</div>
-            </div>
-        </div>
+    <div class="down">
+        <div class="tit">充值记录</div>
+    </div>
+   
+  </div>
+        <HelloWorld :downsData="downsData"/>
     </div>
 </template>
 
 <script>
-export default {
-    data(){
-        return{
-            topData:
-                {
-                    mon: '68.00', mons: '88.00',
-                },
-            downsData:[
-                {
-                    method: "微信充值" ,
-                    time: "2019-10-30 16:00:00",
-                    oddNumbers: "123456789",
-                    sumMoney:'+100'
-                },
-                // {
-                //     method: "支付宝充值" ,
-                //     time: "2019-10-30 16:00:00",
-                //     oddNumbers: "123456789",
-                //     sumMoney:'+100'
-                // },
-                // {
-                //     method: "公户充值" ,
-                //     time: "2019-10-30 16:00:00",
-                //     oddNumbers: "123456789",
-                //     sumMoney:'+100'
-                // }
-            ]
-        }
-    }
+    import  HelloWorld  from '../components/HelloWorld';
+    export default {
+        data(){
+            return{
+                topData:
+                    {
+                        mon: '68.00', mons: '88.00',
+                    },
+                downsData:[
+                    {
+                        method: "微信充值" ,
+                        time: "2019-10-30 16:00:00",
+                        oddNumbers: "123456789",
+                        sumMoney:'+100'
+                    },
+                    {
+                        method: "支付宝充值" ,
+                        time: "2019-10-30 16:00:00",
+                        oddNumbers: "123456789",
+                        sumMoney:'+100'
+                    },
+                    {
+                        method: "公户充值" ,
+                        time: "2019-10-30 16:00:00",
+                        oddNumbers: "123456789",
+                        sumMoney:'+100'
+                    }
+                ]
+            }
+        },
+        components: {
+        HelloWorld
+    },
 }
 </script>
 
@@ -129,47 +127,6 @@ export default {
         box-sizing: border-box;
         border-bottom: 1px solid #f6f6f6;
     }
-    .details{
-        display: flex;
-        width: 100%;
-        border-bottom: 1px solid #f6f6f6;
-    }
-    .conten{
-        flex: 1;
-    }
-    .sumMoney{
-        text-align: right;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .recharge{
-        font-size: 30px;
-        font-family: PingFang SC;
-        font-weight: 500;
-        color: #1E1E1E;
-        margin-top: 41px;
-    }
-    .time{
-        font-size: 30px;
-        font-family: DINPro;
-        font-weight: 400;   
-        color: #646464;
-        margin-top: 24px;
-    }
-    .num{
-        font-size: 24px;
-        font-family: PingFang SC;
-        font-weight: 400;
-        color: #B5B3B2;
-        margin-top: 24px;
-        margin-bottom: 40px;
-    }
-    .number{
-        font-size: 24px;
-        font-family: DINPro;
-        font-weight: 400;
-        color: #646464;
-    }
+   
 </style>
 

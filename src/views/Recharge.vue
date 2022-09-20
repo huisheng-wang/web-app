@@ -1,11 +1,6 @@
 <template>
   <div class="recharge">
-    <div class="top">
-        <div class="btn">
-            <img class="img" src="../../img/btn_前往.png" alt="">
-        </div>
-        <div class="full">充值</div>
-    </div>
+    <top :title='$route.params.name'></top>
     <div class="content">
         <div class="contents">
             <div class="money">
@@ -17,14 +12,16 @@
             <div class="one">1.支付方式为微信支付</div>
             <div class="one">2.充值记录可能延时，仅供参考，请以实际余额</div>
         </div>
-        
-        
     </div>
   </div>
 </template>
 
 <script>
+import top from '../components/top.vue'
 export default {
+    components:{
+        top
+    },
     data(){
         return{
             amountId:1,
@@ -57,42 +54,21 @@ export default {
                  
         } 
     },
+    mounted(){
+        console.log(this.$route)
+    },
     methods:{
         choice(e){
             const { id } = e
             this.amountId = id
         }
-    }
+    },
+  
 }
 </script>
 
 <style scoped>
-.top{
-    display: flex;
-    width: 100%;
-    height: 88px;
-    padding-top: 40px;
-    align-items: center;
-    /* margin: 0 40px; */
-    /* box-sizing: border-box; */
-}
-.btn{
-    height: 88px;
-    margin: 0 40px;
-    box-sizing: border-box;
-    line-height: 88px;
-}
-.img{
-    width: 21px;
-    height: 30px;
-}
-.full{
-    margin-left: 33.2vw;
-    font-size: 36px;
-    font-family: PingFang SC;
-    font-weight: 500;
-    color: #FF6D00;
-}
+
 .content{
     background-color: #f6f6f6;
     padding-top: 30px;

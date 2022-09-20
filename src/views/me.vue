@@ -6,7 +6,7 @@
         </div>
         <div class="card">
           <div class="imgs">
-            <img class="img" src="../../img/icon_洗车_2.png" alt="">
+            <img class="img" :src="datas.url" alt="">
           </div>
           <div class="information"> 
             <div class="text">粉红小猪</div>
@@ -29,9 +29,11 @@
 </template>
 
 <script>
+  import axios from "../utils/request"
 export default {
   data(){
     return {
+      datas:{},
       RailData:[
         {
           img: require("../../img/icon_红包.png"),
@@ -63,22 +65,42 @@ export default {
       ]
     }
   },
+  mounted(){
+    this.getData()
+  },
   methods:{
     skip(e){
      const UrlFilters = {
        '余额':'/balance',
        '个人设置':'/homes',
        '企业认证': '/about',
-       '人脸支付': '/recharge'
+       '人脸支付': '/recharge',
+       '企业认证': '/attestation'
      }
       this.$router.push({ path: `${UrlFilters[e.name] || '/code'}/${e.name}`})
+    },
+    getData(){
+      axios.get('/v1/images/search?limit=1').then(response=> {
+        const {status,data} = response || {}
+        if(status===200){
+          this.datas = data[0]
+        }
+    // 处理成功情况
+  })
+  .catch( error=>{
+    // 处理错误情况
+    console.log(error);
+  })
     }
   }
-  
 }
 </script>
 
 <style scoped>
+  .userInfo{
+    width: 100%;
+    height: 100%;
+  }
   *{
     margin:0;
     padding: 0;
@@ -101,19 +123,19 @@ export default {
     
   }
   .card{
-    width: 750px;
-    z-index: 99;
+    width: 100%;
     display: flex;
     padding-top: 121px;
-    padding-left: 72px;
   }
   .imgs{
     width: 160px;
     height: 160px;
+    margin-left: 72px;
   }
   .img{
     width: 160px;
     height: 160px;
+    border-radius: 50%;
   }
   .information{
     margin-left: 66px;

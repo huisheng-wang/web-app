@@ -159,8 +159,6 @@ template {
   color: #ffffff;
 }
 .content {
-  /* width: 273px; */
-  /* height: 74px; */
   flex: 1;
   font-size: 14px;
   font-family: PingFang SC;
@@ -173,6 +171,7 @@ template {
   display: flex;
   background-color: #fbfbfb;
   padding: 30px;
+  box-sizing: border-box;
 }
 
 .conten {
@@ -181,7 +180,6 @@ template {
   background: #ffffff;
   box-shadow: 0 3px 150px 0 #f2f3f6;
   border-radius: 20px;
-  margin-right: 30px;
 }
 .contens {
   width: 330px;
@@ -189,7 +187,7 @@ template {
   background: #ffffff;
   box-shadow: 0 3px 150px 0 #f2f3f6;
   border-radius: 20px;
-  margin-right: 30px;
+  margin-left: 30px;
 }
 .frame {
   width: 60px;
