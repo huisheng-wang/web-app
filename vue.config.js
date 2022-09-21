@@ -3,7 +3,7 @@ module.exports = {
     devServer: {
         proxy: {
             '/api': {
-              target: 'https://api.thecatapi.com',
+              target: 'https://dog.ceo/api',
               ws: true,
               changeOrigin: true,
               pathRewrite: { '^/api': '' }
